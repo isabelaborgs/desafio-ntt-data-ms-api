@@ -1,0 +1,17 @@
+server:
+  port: 8200
+  # port: ${random.int(8200,8299)}
+
+spring:
+  application:
+    name: pedidos-service
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    non-secure-port: ${server.port}
+    non-secure-port-enabled: true
+    secure-port-enabled: false

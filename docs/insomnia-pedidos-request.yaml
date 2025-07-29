@@ -1,0 +1,63 @@
+type: collection.insomnia.rest/5.0
+name: teste-pedidos
+meta:
+  id: wrk_54737eb6a25f4a39a99df38348033049
+  created: 1753741630788
+  modified: 1753741630788
+  description: ""
+collection:
+  - url: http://localhost:8765/pedidos
+    name: criarPedido
+    meta:
+      id: req_9bbcb75027094057a92055bf0f405c94
+      created: 1753741636949
+      modified: 1753741955103
+      isPrivate: false
+      description: ""
+      sortKey: -1753741636949
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"itens": [
+        		{
+        			"idProduto": 1,
+        			"quantidade": 5
+        		},
+        		{
+        			"idProduto": 2,
+        			"quantidade": 2
+        		}
+        	]
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    authentication:
+      type: bearer
+      token: TOKEN_SECRETO_123456
+      prefix: Bearer
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_74aff47427ac8d7cebf471e76d5655fa123860db
+    created: 1753741630796
+    modified: 1753741630796
+environments:
+  name: Base Environment
+  meta:
+    id: env_74aff47427ac8d7cebf471e76d5655fa123860db
+    created: 1753741630792
+    modified: 1753741630792
+    isPrivate: false

@@ -1,0 +1,298 @@
+type: collection.insomnia.rest/5.0
+name: teste-produtos
+meta:
+  id: wrk_357fd625a9c4408dbb922d6c46f35ddb
+  created: 1753720755407
+  modified: 1753720778014
+  description: ""
+collection:
+  - url: http://localhost:8765/produtos
+    name: listarTodos
+    meta:
+      id: req_e5df1028b4ea4872a11ad4237382fd2d
+      created: 1753720755482
+      modified: 1753741434541
+      isPrivate: false
+      description: ""
+      sortKey: -1753720755482
+    method: GET
+    parameters:
+      - id: pair_f7fe25d3d9624e8d9c39875ae62c8f47
+        name: ""
+        value: ""
+        description: ""
+        disabled: true
+    headers:
+      - id: pair_e6e8942e6d1e45f7a88059d16c1d3658
+        name: Authorization
+        value: Bearer TOKEN_SECRETO_123456
+        description: ""
+        disabled: true
+        type: text
+        multiline: false
+      - name: User-Agent
+        value: insomnia/11.3.0
+        id: pair_adeb9e7455bd4495b2feae6f08a0e3de
+    authentication:
+      type: bearer
+      token: TOKEN_SECRETO_123456
+      prefix: Bearer
+      disabled: false
+    scripts:
+      preRequest: ""
+      afterResponse: ""
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8765/produtos/1
+    name: buscarPorId
+    meta:
+      id: req_dca38aadaf95417d85a9f2023e386650
+      created: 1753740782653
+      modified: 1753741290447
+      isPrivate: false
+      description: ""
+      sortKey: -1753740782653
+    method: GET
+    parameters:
+      - id: pair_8bb9ede2dd1440e08ab3d769e8e5a7c3
+        name: id
+        value: "1"
+        description: ""
+        disabled: true
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    authentication:
+      type: bearer
+      token: TOKEN_SECRETO_123456
+      prefix: Bearer
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8765/produtos
+    name: criar
+    meta:
+      id: req_b5c4f6219e7147418bc0d487ff05975a
+      created: 1753741063306
+      modified: 1753741218870
+      isPrivate: false
+      description: ""
+      sortKey: -1753741063306
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nome": "Camiseta Branca Básica",
+        	"descricao": "Camiseta branca 100% algodão",
+        	"preco": 59.9
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    authentication:
+      type: bearer
+      token: TOKEN_SECRETO_123456
+      prefix: Bearer
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8765/produtos/2
+    name: atualizar
+    meta:
+      id: req_541c15b626c443748135040554b2a49f
+      created: 1753741263145
+      modified: 1753741430987
+      isPrivate: false
+      description: ""
+      sortKey: -1753741263145
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        	{
+        		"nome": "Legging Esportiva Feminina",
+        		"descricao": "Calça legging com tecido de alta compressão",
+        		"preco": 189.99
+        	}
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    authentication:
+      type: bearer
+      token: TOKEN_SECRETO_123456
+      prefix: Bearer
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8765/produtos/14
+    name: remover
+    meta:
+      id: req_f9f96254d7214cab838038c0905e07e5
+      created: 1753741441829
+      modified: 1753741551804
+      isPrivate: false
+      description: ""
+      sortKey: -1753741441829
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    authentication:
+      type: bearer
+      token: TOKEN_SECRETO_123456
+      prefix: Bearer
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8765/produtos/nome
+    name: buscarPorNome
+    meta:
+      id: req_e14c7d36ef1d4e8ba51452a8ef81022a
+      created: 1753786730181
+      modified: 1753787004695
+      isPrivate: false
+      description: ""
+      sortKey: -1753740922979.5
+    method: GET
+    parameters:
+      - id: pair_f5b70948621e4587ad11efe356348463
+        name: nome
+        value: camiseta
+        description: ""
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    authentication:
+      type: bearer
+      token: TOKEN_SECRETO_123456
+      prefix: Bearer
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8765/produtos/preco
+    name: buscarPorPrecoMaximo
+    meta:
+      id: req_71134419185448db966e11a58be45d72
+      created: 1753786921296
+      modified: 1753787006192
+      isPrivate: false
+      description: ""
+      sortKey: -1753740993142.75
+    method: GET
+    parameters:
+      - id: pair_79588b5963a24c78b7c64a7b928ff016
+        name: maximo
+        value: "100"
+        description: ""
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    authentication:
+      type: bearer
+      token: TOKEN_SECRETO_123456
+      prefix: Bearer
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8765/produtos/
+    name: unauthorized
+    meta:
+      id: req_5a361c7e32624f6c947cd69f4521a613
+      created: 1753787052966
+      modified: 1753787073547
+      isPrivate: false
+      description: ""
+      sortKey: -1753787052966
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8765/produtos/999
+    name: notFound
+    meta:
+      id: req_cf7eab5a17e84f94ad8ac9f7511517eb
+      created: 1753787091137
+      modified: 1753787141694
+      isPrivate: false
+      description: ""
+      sortKey: -1753787091137
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    authentication:
+      type: bearer
+      token: TOKEN_SECRETO_123456
+      prefix: Bearer
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_f7616c7cab6b3057105a6b5d7084b10226e044ad
+    created: 1753720755419
+    modified: 1753720755419
+environments:
+  name: Base Environment
+  meta:
+    id: env_f7616c7cab6b3057105a6b5d7084b10226e044ad
+    created: 1753720755416
+    modified: 1753720755416
+    isPrivate: false
