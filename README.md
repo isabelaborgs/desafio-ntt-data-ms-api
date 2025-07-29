@@ -1,8 +1,8 @@
-<div style="text-align: center;">
+<div align="center">
 
 # Sistema de catálogo de produtos e simulação de pedidos
 
-#### Uma **API REST** baseada em **microsserviços** com **Spring Boot** e **Spring Cloud**
+Uma **API REST** baseada em **microsserviços** com **Spring Boot** e **Spring Cloud**
 
 ![Java](https://img.shields.io/badge/Java-21-blue)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.5.4-brightgreen)
@@ -10,8 +10,6 @@
 ![Maven](https://img.shields.io/badge/Maven-4.0-red)
 
 </div>
-
----
 
 ## Índice
 
@@ -27,13 +25,9 @@
 * [Demonstração da solução](#demonstração-da-solução)
 * [Licença](#licença)
 
----
-
 ## Visão geral
 
 Este projeto foi desenvolvido no desafio técnico da NTT Data no Bootcamp de Java e IA (DIO & NTT Data). O projeto consiste em uma API REST que simula um sistema simples de catálogo de produtos e criação de pedidos, composta por dois microsserviços independentes, implementados utilizando Spring Boot e Spring Cloud. O sistema demonstra a comunicação entre microsserviços por meio de requisições HTTP, com o uso de um API Gateway e Service Discovery.
-
----
 
 ## Arquitetura
 
@@ -46,13 +40,9 @@ O sistema é composto por quatro componentes principais que rodam de forma indep
 
 ### Diagrama de fluxo
 
-A arquitetura proposta no desafio está representada no seguinte fluxo:
+A arquitetura proposta no desafio está representada no seguinte fluxo ( elaborado e disponibilizado pela NTT Data para o desafio):
 
 ![Diagrama da Arquitetura](docs/arquitetura-ms.png)
-
-<small>Diagrama elaborado e disponibilizado pela NTT Data para o desafio</small>
-
----
 
 ## Ferramentas e tecnologias
 
@@ -70,8 +60,6 @@ A arquitetura proposta no desafio está representada no seguinte fluxo:
 * **IntelliJ IDEA:** IDE utilizada para desenvolvimento da aplicação.
 * **Lombok:** biblioteca Java utilizada para reduzir a necessidade de código boilerplate.
 * **Insomnia**: cliente HTTP utilizado para testar os endpoints.
-
----
 
 ## Como executar
 
@@ -99,8 +87,6 @@ Inicie os serviços na seguinte ordem:
     * Execute o comando: `mvn spring-boot:run`
     * Este será o ponto de entrada. Todas as requisições devem ser feitas para `http://localhost:8765`.
 
----
-
 ## Como utilizar
 
 Após executar todos os serviços, utilize o cliente HTTP de sua escolha para testar os endpoints. As seções a seguir detalham o processo de autenticação e as requisições HTTP disponíveis para cada microsserviço. **Todas as requisições devem ser feitas através do API Gateway na porta `8765`.** 
@@ -120,7 +106,7 @@ Authorization: Bearer TOKEN_SECRETO_123456
 
 ### Catálogo de produtos (`/produtos`)
 
-> **Nota**: A API utiliza um `DataLoader` no momento da inicialização que popula o banco de dados com alguns produtos por padrão.
+**Observação**: A API utiliza um `DataLoader` no momento da inicialização que popula o banco de dados com alguns produtos por padrão.
 
 * **`GET /produtos`**: Lista todos os produtos cadastrados.
 * **`GET /produtos/{id}`**: Busca um produto por seu ID.
@@ -181,18 +167,13 @@ Authorization: Bearer TOKEN_SECRETO_123456
             "dataPedido": "2025-07-28T19:32:40.6426492"
         }
         ```
-  
----
 
 ## Demonstração da solução
 
 O vídeo a seguir demonstra as funcionalidades dos serviços por meio do Insomnia.
 
-<video controls width="100%">
-    <source src="docs/demo-api-produtos.mp4" type="video/mp4" />
-</video>
+https://github.com/user-attachments/assets/b8f86d66-2d70-4a3f-adfd-d1fa41aba293
 
----
 
 ## Licença
 
@@ -200,7 +181,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ---
 
-<div style="text-align: center;">
+<div align="center">
 
 **Desenvolvido por Isabela Borges**<br>
 [LinkedIn](https://www.linkedin.com/in/isabela-borgs/) | [Portfólio](https://isabelaborgesdev.vercel.app/)
